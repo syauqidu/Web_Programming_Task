@@ -1,2 +1,2 @@
-# Web_Programming_Task
-Repository for Web Programming Task Telkom
+# WEB PROGRAMMING COURSE
+Repository for Web Programming Task Telkom University Group 1
