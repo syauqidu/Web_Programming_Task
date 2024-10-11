@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu View</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #338b91;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 1000px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #338b91;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #26686d;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #338b91;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #338b91;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #338b91;
+        }
+
+        table th {
+            background-color: #338b91;
+            color: white;
+            font-size: 16px;
+        }
+
+        table td {
+            background-color: #f9f9f9;
+        }
+
+        select:hover {
+            border-color: #26686d;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Menu View</h1>
+        <h2>Filter</h2>
+        <div class="section">
+            <label for="Kelas">Kelas</label>
+            <select name="Kelas" id="">
+                <option value="--pilih--" selected>--pilih--</option>
+                <option value="SE-46-01">SE-46-01</option>
+                <option value="SE-46-02">SE-46-02</option>
+                <option value="SE-46-03">SE-46-03</option>
+                <option value="SE-46-04">SE-46-04</option>
+            </select>
+        </div>
+
+        <!-- Pilihan Gender -->
+        <div class="section">
+            <label for="Gender">Gender</label>
+            <select name="Gender" id="">
+                <option value="--pilih--" selected>--pilih--</option>
+                <option value="Pria">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <label for="Minat">Minat</label>
+            <select name="Minat" id="">
+                <option value="--pilih--" selected>--pilih--</option>
+                <option value="Bahasa">Bahasa</option>
+                <option value="Olahraga">Olahraga</option>
+            </select>
+        </div>
+
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>NIM</th>
+                <th>Kelas</th>
+                <th>Gender</th>
+                <th>TTL</th>
+                <th>Minat</th>
+                <th>Alamat</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Akbar</td>
+                <td>13031749832646</td>
+                <td>SE-46-04</td>
+                <td>Laki-laki</td>
+                <td>23-10-2003</td>
+                <td>Bahasa</td>
+                <td>Jl. Nangka 10</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Max Verstappen</td>
+                <td>13032493294</td>
+                <td>SE-46-04</td>
+                <td>Laki-laki</td>
+                <td>17-02-1999</td>
+                <td>Balapan</td>
+                <td>Jl. Champion No. 14</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Batman</td>
+                <td>130547474744</td>
+                <td>SE-46-04</td>
+                <td>Laki-laki</td>
+                <td>31-05-2001</td>
+                <td>Pahlawan</td>
+                <td>Jl. Gotham City No 99</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

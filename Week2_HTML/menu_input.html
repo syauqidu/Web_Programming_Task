@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .content {
+                background-color: aliceblue;
+                display: flex;
+                align-items: start;
+                justify-content: left;
+                flex-direction: column;
+                padding: 50px;
+                border-radius: 10px;
+            }
+
+            h1 {
+                color: aliceblue;
+            }
+
+            
+            .label{
+                font-weight: bold;
+                color: #26686d;
+                width: fit-content;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .section{
+                display: flex;
+                flex-direction: column;
+                width: 500px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            input {
+                border-top: 0px;
+                border-right: 0px;
+                border-left: 0px;
+                border-color: #44c9be;
+                height: 30px;
+                width: 100%;
+                font-size: 14px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+            button {
+                background-color: #338b91;
+                color: white;
+                font-weight: bold;
+                height: 40px;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 20px; 
+                border-radius: 5px;
+                border: 0px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: white; 
+                border: 3px solid #44c9be;
+                border-color: #338b91;
+                color: #338b91;
+            }
+
+            #gender {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+            /* Custom styles for radio buttons */
+            input[type="radio"] {
+                display: none; /* Sembunyikan radio button asli */
+            }
+
+            input[type="radio"] + label {
+                position: relative;
+                padding-left: 25px; /* Ruang untuk custom radio */
+                cursor: pointer;
+            }
+
+            input[type="radio"] + label::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #338b91;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+            input[type="radio"]:checked + label::before {
+                background-color: #338b91; /* Warna saat radio button dipilih */
+            }
+
+            /* Custom styles for checkboxes */
+            input[type="checkbox"] {
+                display: none; /* Sembunyikan checkbox asli */
+            }
+
+            input[type="checkbox"] + label {
+                position: relative;
+                padding-left: 25px; /* Ruang untuk custom checkbox */
+                cursor: pointer;
+            }
+
+            input[type="checkbox"] + label::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                border: 2px solid #338b91;
+                background-color: white;
+            }
+
+            input[type="checkbox"]:checked + label::before {
+                background-color: #338b91; /* Warna saat checkbox dipilih */
+            }
+
+            input[type="checkbox"]:checked + label::after {
+                content: "";
+                position: absolute;
+                left: 4px;
+                top: 1px;
+                width: 6px;
+                height: 12px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+
+            select {
+                width: 100%;
+                height: fit-content;
+                border-top: 0px;
+                border-right: 0px;
+                border-left: 0px;
+                border-color: #44c9be;
+                padding: 10px;
+                margin-bottom: 20px;
+                color: #338b91;
+            }
+
+            textarea {
+                width: 100%;
+                height: 70px;
+                border-top: 0px;
+                border-right: 0px;
+                border-left: 0px;
+                border-color: #44c9be;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Daftar Makan di Akbar Home Stay</h1>
+        <div class="content">
+            <div class="section">
+                <label for="nama" class="label">Nama</label>
+                <input type="text">
+            </div>
+            <div class="section">
+                <label for="nim" class="label">NIM</label>
+                <input type="text">
+            </div>
+            <div class="section">
+                <label for="kelas" class="label">Kelas</label>
+                <input type="text">
+            </div>
+            <div class="section">
+                <label for="gender" class="label">Gender</label>
+                <div id="gender">
+                    <input type="radio" id="L" value="L" name="gender">
+                    <label for="L">Laki-Laki</label>
+                    <input type="radio" id="P" value="P" name="gender">
+                    <label for="P">Perempuan</label>
+                </div>
+            </div>
+            <div class="section">
+                <label for="ttl" class="label">Tempat Tanggal Lahir</label>
+                <select name="tempat" id="tempat">
+                    <option value="">---Tempat---</option>
+                    <option value="bojongsoang">Bojongsoang</option>
+                    <option value="buahbatu">Buah Batu</option>
+                    <option value="semarang">Semarang</option>
+                </select>
+                <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+            </div>
+            <div style="display: flex;" class="section">
+                <label for="minat" class="label">Minat</label>
+                <div>
+                    <input type="checkbox" id="minat1" name="minat1" value="Programming">
+                    <label for="minat1">Programming</label><br>
+                   
+                    <input type="checkbox" id="minat2" name="minat2" value="Matematika">
+                    <label for="minat2">Matematika</label><br>
+                   
+                    <input type="checkbox" id="minat3" name="minat3" value="Olahraga">
+                    <label for="minat3">Olahraga</label><br>
+                   
+                    <input type="checkbox" id="minat4" name="minat4" value="Seni">
+                    <label for="minat4">Seni</label><br>
+                   
+                    <input type="checkbox" id="minat5" name="minat5" value="Bahasa">
+                    <label for="minat5">Bahasa</label><br>    
+                </div>        
+            </div>
+           
+            <div style="display: flex;" class="section">
+                <div>
+                    <label for="alamat" class="label">Alamat</label>
+                </div>
+               
+                <textarea name="alamat" id="alamat"></textarea>
+            </div>
+            <br>
+           
+            <button>Simpan</button>
+        </div>
+    
+    </body>
+</html>
